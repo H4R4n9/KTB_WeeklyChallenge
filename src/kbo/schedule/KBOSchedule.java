@@ -11,8 +11,7 @@ public abstract class KBOSchedule {
     }
 
     public LocalDate getMatchDate() { return matchDate; }
-    public String    getStadium()   { return stadium; }
-
+    public String getStadium() { return stadium; }
     public abstract void printInfo();
 }
  	

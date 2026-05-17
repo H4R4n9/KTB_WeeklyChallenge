@@ -1,5 +1,4 @@
 package kbo.regular;
-
 import java.time.LocalDate;
 
 public class CanceledMatch extends RegularGame {
@@ -7,14 +6,11 @@ public class CanceledMatch extends RegularGame {
     public enum CancelReason { RAIN, HOT, ETC }
     private CancelReason cancelReason;
 
-    public CanceledMatch(LocalDate matchDate, String stadium,
-                         String homeTeam, String awayTeam, int season,
-                         CancelReason cancelReason) {
+    public CanceledMatch(LocalDate matchDate, String stadium, String homeTeam, String awayTeam, int season, CancelReason cancelReason) {
         super(matchDate, stadium, homeTeam, awayTeam, season);
-        this.cancelReason   = cancelReason;
-    }
+        this.cancelReason = cancelReason;}
 
-    public CancelReason getCancelReason()   { return cancelReason; }
+    public CancelReason getCancelReason() { return cancelReason; }
 
     @Override
     public void printInfo() {
@@ -31,7 +27,7 @@ public class CanceledMatch extends RegularGame {
         return switch (cancelReason) {
             case RAIN -> "우천 취소";
             case HOT -> "폭염 취소";
-            case ETC  -> "기타 취소";
+            case ETC -> "기타 취소";
         };
     }
 }
